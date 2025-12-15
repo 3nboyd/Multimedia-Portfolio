@@ -231,9 +231,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const hiddenEmail = document.querySelector('.hidden-email');
   if (toggleEmailBtn && hiddenEmail) {
     toggleEmailBtn.addEventListener('click', () => {
-      hiddenEmail.classList.add('visible');
-      toggleEmailBtn.setAttribute('aria-expanded', 'true');
-      hiddenEmail.setAttribute('aria-hidden', 'false');
+      const isVisible = hiddenEmail.classList.toggle('visible');
+      toggleEmailBtn.textContent = isVisible ? 'Click to Hide' : 'Click to Unhide';
+      toggleEmailBtn.setAttribute('aria-expanded', String(isVisible));
+      hiddenEmail.setAttribute('aria-hidden', String(!isVisible));
     });
   }
 });
