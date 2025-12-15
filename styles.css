@@ -234,6 +234,10 @@ a { color: inherit; text-decoration: none; }
   font-weight: 600;
 }
 
+.intro-card p {
+  font-size: 18px;
+}
+
 .placeholder-list {
   padding-left: 20px;
   color: var(--muted);
@@ -606,6 +610,25 @@ a { color: inherit; text-decoration: none; }
 
 .thankyou .section-header {
   text-align: center;
+}
+
+.contact {
+  text-align: center;
+}
+
+.toggle-email {
+  margin: 8px auto 0;
+}
+
+.hidden-email {
+  margin-top: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  display: none;
+}
+
+.hidden-email.visible {
+  display: block;
 }
 
 /* Scroll reveal */

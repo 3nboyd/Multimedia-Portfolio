@@ -225,4 +225,15 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Reveal email on button click
+  const toggleEmailBtn = document.querySelector('.toggle-email');
+  const hiddenEmail = document.querySelector('.hidden-email');
+  if (toggleEmailBtn && hiddenEmail) {
+    toggleEmailBtn.addEventListener('click', () => {
+      hiddenEmail.classList.add('visible');
+      toggleEmailBtn.setAttribute('aria-expanded', 'true');
+      hiddenEmail.setAttribute('aria-hidden', 'false');
+    });
+  }
 });
